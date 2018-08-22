@@ -1,7 +1,7 @@
 {
-  "name": "reflexologie",
+  "name": "hello-node-react",
   "version": "1.0.0",
-  "description": "projet reflexologie",
+  "description": "projet",
   "main": "auth/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
