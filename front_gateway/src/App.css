@@ -1,0 +1,423 @@
+.App {
+    text-align: center;
+    width: 100%;
+}
+
+.App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+}
+
+.speButton {
+    position: fixed !important;
+    bottom: 1%;
+    z-index: 9999999999999999999999999;
+    border: solid white 2px !important;
+    box-shadow: none !important;
+    background-color: #038fc7 !important;
+    transition-property: all !important;
+    transition-duration: 500ms !important;
+    color: white !important;
+}
+
+.a-button-wave__circle--size-sOff {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(169,169,169);
+}
+
+.a-button-wave__circle--size-mOff {
+    width: 224px;
+    height: 224px;
+    background-color: rgba(169,169,169, 0.45);
+    opacity: 0;
+    /* animation: animation-a-button-wave--pulse-m 2.25s 0.25s linear infinite; */
+}
+
+.a-button-wave__circle--size-lOff {
+    width: 244px;
+    height: 244px;
+    background-color: rgba(169,169,169, 0.3);
+    opacity: 0;
+    /* animation: animation-a-button-wave--pulse-l 2.25s 0.25s linear infinite; */
+}
+
+.a-button-wave:hover .a-button-wave__circle--size-mOff {
+    background-color: rgba(169,169,169, 0.6);
+}
+
+.a-button-wave:hover .a-button-wave__circle--size-lOff {
+    background-color: rgba(169,169,169, 0.75);
+}
+
+.App-in {
+    background: white;
+    z-index: 99999;
+    position: fixed;
+    margin-top: 0 !important;
+    top: 0 !important;
+    height: 10%;
+    transition-property: all !important;
+    transition-duration: 500ms !important;
+}
+
+.ball-scale-multiple>div {
+    width: 360px !important;
+    height: 360px !important;
+    top: 150px !important;
+    left: -5px !important;
+    z-index: 1 !important;
+}
+
+.App-header {
+    background-color: #038fc7;
+    height: 30px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 1px;
+    color: white;
+    width: 100%;
+    z-index: 9999999999999999999999999;
+    top: 0;
+}
+
+.timeline {
+    margin-top: 5% !important;
+}
+
+.App-title {
+    font-size: 1.5em;
+}
+
+.footer {
+    width: 100%;
+    height: 5%;
+    position: fixed;
+    bottom: 0;
+    background: #038fc7;
+    transition-property: all;
+    transition-duration: 500ms;
+    z-index: 99999999;
+}
+
+.App-intro {
+    font-size: large;
+    margin-top: 2% !important;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.button {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    top: 50%;
+    left: 50%;
+    margin: -180px 0 0 -180px;
+    cursor: pointer;
+}
+
+.button .circle {
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    background-color: #f2dbb7;
+    border-radius: 50%;
+    box-shadow: 0px 0px 25px 5px rgba(1, 1, 1, 0.4);
+    transition: all 500ms;
+}
+
+.button .circle h1 {
+    font-family: "Oleo Script";
+    text-align: center;
+    font-weight: normal;
+    color: #21626f;
+    font-size: 60px;
+    padding: 0;
+    margin: 120px 0 0 0;
+}
+
+/*- Screen Sizes*/
+
+/*import fonts*/
+
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+.wrapper {
+    padding: 1em 5em 1em;
+    margin: 3.125em auto;
+    max-width: 1000px;
+}
+
+/* - &:nth-child(1) {
+			 grid-area: entry1;
+		 }
+   - useful timesaver if there is a lengthy list
+*/
+
+.timeline {
+    line-height: 1.5em;
+    font-size: 14px;
+    transition: all 0.4s ease;
+    position: relative;
+    counter-reset: section;
+}
+
+.timeline:before {
+    content: "";
+    width: 2px;
+    height: 100%;
+    background: #424242;
+    position: absolute;
+    top: 0;
+    left: 50% !important;
+    border-radius: 40px 40px;
+}
+
+.fixed {
+    position: fixed !important;
+}
+
+.timeline--entry {
+    position: relative;
+    background-color: #eeeeee;
+}
+
+.timeline--entry__title {
+    color: white;
+    background-color: #038fc7;
+    font-family: "Oswald", Georgia, Cambria, "Times New Roman", Times, serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: 1em;
+}
+
+.timeline--entry__detail {
+    background-color: #dddddd;
+    padding: 1em;
+    margin: 0;
+}
+
+.timeline--entry:before {
+    content: "";
+    font-family: "Oswald", Georgia, Cambria, "Times New Roman", Times, serif;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3em;
+    height: 3em;
+    background-color: #dddddd;
+    border: 0.2em solid white;
+    border-radius: 50%;
+    position: absolute;
+    /* counter-increment: section; */
+    /* content: counter(section); */
+    text-shadow: 0 1px 0 #424242;
+    left: -4.5em;
+}
+
+.tc-pattern {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.a-button-wave {
+    display: inline-block;
+    cursor: pointer;
+    margin: 25px 0 0 0;
+    padding: 0;
+    outline: none;
+    text-align: center;
+    position: relative;
+    width: 80px;
+    height: 500px;
+    color: #fff;
+}
+
+.a-button-wave:hover,
+.a-button-wave:focus {
+    color: #fff;
+}
+
+.a-button-wave:hover .a-button-wave__circle--size-m {
+    color: white !important;
+    background-color: rgba(242, 168, 41, 0.6);
+}
+
+.a-button-wave:hover .a-button-wave__circle--size-l {
+    color: white !important;
+    background-color: rgba(242, 168, 41, 0.75);
+}
+
+.a-button-wave:hover .a-button-wave__text {
+    color: white !important;
+    color: rgb(242, 168, 41);
+}
+
+.a-button-wave__icon {
+    font-size: 28px;
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.a-button-wave__circle {
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: background-color 0.3s ease;
+}
+
+.a-button-wave__circle--size-s {
+    width: 200px;
+    height: 200px;
+    color: white !important;
+    background-color: rgb(242, 168, 41);
+}
+
+.a-button-wave__circle--size-m {
+    width: 224px;
+    height: 224px;
+    color: white !important;
+    background-color: rgba(242, 168, 41, 0.45);
+    opacity: 0;
+    animation: animation-a-button-wave--pulse-m 2.25s 0.25s linear infinite;
+}
+
+.a-button-wave__circle--size-l {
+    width: 244px;
+    height: 244px;
+    color: white !important;
+    background-color: rgba(242, 168, 41, 0.3);
+    opacity: 0;
+    animation: animation-a-button-wave--pulse-l 2.25s 0.25s linear infinite;
+}
+
+.a-button-wave__text {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    position: absolute;
+    bottom: -25px;
+    width: 100%;
+    transition: color 0.2s ease-in;
+}
+
+@keyframes animation-a-button-wave--pulse-m {
+    0% {
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+    }
+    25% {
+        width: 224px;
+        height: 224px;
+        opacity: 0.5;
+    }
+    50% {
+        width: 244px;
+        height: 244px;
+        opacity: 1;
+    }
+    75% {
+        width: 264px;
+        height: 264px;
+        opacity: 0.5;
+    }
+    100% {
+        width: 284px;
+        height: 284px;
+        opacity: 0;
+    }
+}
+
+@keyframes animation-a-button-wave--pulse-l {
+    0% {
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+    }
+    25% {
+        width: 224px;
+        height: 224px;
+        opacity: 0.5;
+    }
+    50% {
+        width: 244px;
+        height: 244px;
+        opacity: 1;
+    }
+    75% {
+        width: 274px;
+        height: 247px;
+        opacity: 0.5;
+    }
+    100% {
+        width: 294px;
+        height: 294px;
+        opacity: 0;
+    }
+}
+
+@supports (display: grid) {
+    @media only screen and (min-width: 768px) {
+        .CircularIntegration-button-135 {
+            margin-top: 30% !important;
+        }
+        .ball-scale-multiple>div {
+            top: 260px !important;
+            left: 320px !important;
+        }
+        .timeline {
+            display: grid;
+            grid-gap: 4.75em;
+            grid-template-areas: ".  entry1" "entry2  ." ". entry3" "entry4 ." ". entry5";
+        }
+        .timeline:before {
+            left: 49.5%;
+        }
+        .timeline--entry:nth-child(1) {
+            grid-area: entry1;
+        }
+        .timeline--entry:nth-child(2) {
+            grid-area: entry2;
+        }
+        .timeline--entry:nth-child(3) {
+            grid-area: entry3;
+        }
+        .timeline--entry:nth-child(4) {
+            grid-area: entry4;
+        }
+        .timeline--entry:nth-child(5) {
+            grid-area: entry5;
+        }
+        .timeline--entry:nth-of-type(odd):before {
+            left: -3.8em;
+        }
+        .timeline--entry:nth-of-type(even):not(:nth-of-type(odd)) .timeline--entry__title:before {
+            left: 100%;
+            border-left: 10px solid #ec407a;
+            border-right: 0;
+        }
+        .timeline--entry:nth-of-type(even):before {
+            left: 103%;
+        }
+    }
+}
